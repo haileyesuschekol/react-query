@@ -8,6 +8,8 @@ function App() {
       fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
         res.json()
       ),
+    // staleTime: 4000, // refetch when switch windows, net reconnect
+    // refetchInterval: 4000, //refetch every four second
   })
 
   const { mutate } = useMutation({
